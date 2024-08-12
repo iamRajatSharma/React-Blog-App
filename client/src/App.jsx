@@ -2,9 +2,11 @@ import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider, Outl
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Single from "./pages/Single";
 import Write from "./pages/Write";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 import "./style.scss"
 
 const Layout = () => {
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />
+            },
+            {
+                path: "/single/:id",
+                element: <Single />
             }
         ]
     },
